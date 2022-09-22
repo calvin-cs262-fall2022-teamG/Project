@@ -7,8 +7,8 @@ import { LoginStyle } from '../styles/globalStyles';
 import { homeStyle } from '../styles/globalStyles';
 
 const fontStyles = ["normal", "italic"];
-
-export default function HomeScreen({ navigation }) {
+// create
+export default function LoginScreen({ navigation }) {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     return (
@@ -19,18 +19,18 @@ export default function HomeScreen({ navigation }) {
             />
 
 
-            <View style={LoginStyle.inputView}>
+            <View style={globalStyles.inputView}>
                 <TextInput
-                    style={LoginStyle.TextInput}
+                    style={globalStyles.TextInput}
                     placeholder="Email"
                     placeholderTextColor="#003f5c"
                     onChangeText={(email) => setEmail(email)}
                 />
             </View>
 
-            <View style={LoginStyle.inputView}>
+            <View style={globalStyles.inputView}>
                 <TextInput
-                    style={LoginStyle.TextInput}
+                    style={globalStyles.TextInput}
                     placeholder="Password."
                     placeholderTextColor="#003f5c"
                     secureTextEntry={true}
@@ -54,8 +54,7 @@ export default function HomeScreen({ navigation }) {
                     title="Register Now!"
                     fontWeight='bold'
                     onPress={() => {
-                        /*navigation.navigate('home');*/
-                        return 0
+                        navigation.navigate('Register');
                     }
                     } />
             </View>
