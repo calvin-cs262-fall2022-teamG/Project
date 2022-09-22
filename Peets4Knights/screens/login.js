@@ -47,7 +47,7 @@ export default function LoginScreen({ navigation }) {
                 <Text style={globalStyles.loginText}>LOGIN</Text>
 
             </TouchableOpacity>
-            <Text>Don't have an account?</Text>
+            <Text style = {{fontStyle: 'italic', fontSize: 13, fontWeight: ''}}>Don't have an account?</Text>
             <View style={LoginStyle.RegButton} >
                 <Button
                     color='blue'
