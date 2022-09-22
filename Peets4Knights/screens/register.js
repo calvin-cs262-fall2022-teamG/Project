@@ -7,7 +7,7 @@ import { globalStyles } from '../styles/globalStyles';
 
 const fontStyles = ["normal", "italic"];
 
-export default function SignUpScreen({ navigation }) {
+export default function RegScreen({ navigation }) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
