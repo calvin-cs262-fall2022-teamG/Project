@@ -63,8 +63,7 @@ export default function RegScreen({ navigation }) {
             
             <TouchableOpacity style={globalStyles.loginBtn}
                 onPress={() => {
-                    /*navigation.navigate('home');*/
-                    return 0
+                    navigation.navigate('login');
                 }}
                                 >
                 <Text style={globalStyles.loginText}>Register</Text>
