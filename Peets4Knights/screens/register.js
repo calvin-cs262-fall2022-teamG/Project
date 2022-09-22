@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { useState } from "react";
-import { Button, Text, TextInput, View, Image } from 'react-native';
+import { TouchableOpacity, Text, TextInput, View, Image } from 'react-native';
 
 import { regStyle } from '../styles/globalStyles';
 import { globalStyles } from '../styles/globalStyles';
 
 const fontStyles = ["normal", "italic"];
 
-export default function SignUpScreen({ navigation }) {
+export default function RegScreen({ navigation }) {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -19,58 +19,57 @@ export default function SignUpScreen({ navigation }) {
                 style = {{width: 120, height: 95}}
                 source={require('../pics/appname.png')} 
             />
+            <View style={globalStyles.inputView}>
+                <TextInput
+                    style={globalStyles.TextInput}
+                    placeholder="Name"
+                    placeholderTextColor="#003f5c"
+                    onChangeText={(name) => setName(name)}
+                />
+            </View>
 
-            <TextInput
-                style={regStyle.container}
-                value={name}
-                placeholder={"Name"}
-                onChangeText={(text) => setName(text)}
-                autoCapitalize={"none"}
-            />
+            <View style={globalStyles.inputView}>
+                <TextInput
+                    style={globalStyles.TextInput}
+                    placeholder="Password."
+                    placeholderTextColor="#003f5c"
+                    secureTextEntry={true}
+                    onChangeText={(email) => setEmail(email)}
+                />
+            </View>
+                        <View style={globalStyles.inputView}>
+                <TextInput
+                    style={globalStyles.TextInput}
+                    placeholder="Email"
+                    placeholderTextColor="#003f5c"
+                    onChangeText={(password) => setPassword(password)}
+                />
+            </View>
 
-            <TextInput
-                style={regStyle.container}
-                value={email}
-                placeholder={"Email"}
-                onChangeText={(text) => setEmail(text)}
-                autoCapitalize={"none"}
-            />
-
-            <TextInput
-                style={regStyle.container}
-                value={password}
-                placeholder={"Password"}
-                onChangeText={(text) => setPassword(text)}
-                autoCapitalize={"none"}
-            />
-            
-            <TextInput
-                style={regStyle.container}
-                value={checkPassword}
-                placeholder={"Comfirm Password"}
-                onChangeText={(text) => confirmPassword(text)}
-                autoCapitalize={"none"}
-            />
+            <View style={globalStyles.inputView}>
+                <TextInput
+                    style={globalStyles.TextInput}
+                    placeholder="Password."
+                    placeholderTextColor="#003f5c"
+                    secureTextEntry={true}
+                    onChangeText={(checkPassword) => confirmPassword(checkPassword)}
+                />
+            </View>
 
             <Text style = {{fontStyle: 'italic', fontSize: 13, fontWeight: ''}}>
                 {"\n"}{"\n"}* Please enter Calvin email only.
             </Text>
 
             
-            <View style={regStyle.signUpButton} >
-                <Button
-                    color='black'
-                    title="Sign up!"
-                    fontWeight= 'bold'
-                    onPress={() => {
-                        /*navigation.navigate('home');*/
-                        return 0
-                    }
-                } />
-            </View>
-            
-            <Text>{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}CS262 Fall 2022 Team-Gold</Text>
-            <Text>©Calvin University</Text>
+            <TouchableOpacity style={globalStyles.loginBtn}
+                onPress={() => {
+                    /*navigation.navigate('home');*/
+                    return 0
+                }}
+                                >
+                <Text style={globalStyles.loginText}>Register</Text>
+
+            </TouchableOpacity>
 
         </View>
     );
