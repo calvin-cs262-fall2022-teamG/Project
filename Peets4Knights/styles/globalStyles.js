@@ -29,13 +29,6 @@ export const homeStyle = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-    homeButton: {
-        padding: 10,
-        position: 'relative',
-        marginTop: '20%',
-        width: '100%',
-    },
-    
 })
 
 export const LoginStyle = StyleSheet.create({
@@ -59,4 +52,19 @@ export const LoginStyle = StyleSheet.create({
         padding: 10,
         marginLeft: 20,
       }
+})
+
+export const regStyle = StyleSheet.create({
+    input: {
+      height: 40,
+      marginBottom: 10,
+      backgroundColor: '#fff',
+      marginTop: 10,
+    },
+
+    signUpButton: {
+        padding: 15,
+        position: 'relative',
+        width: '100%',
+    },
 })
