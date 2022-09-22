@@ -29,3 +29,18 @@ export const homeStyle = StyleSheet.create({
         width: '100%',
     },
 })
+
+export const regStyle = StyleSheet.create({
+    input: {
+      height: 40,
+      marginBottom: 10,
+      backgroundColor: '#fff',
+      marginTop: 10,
+    },
+
+    signUpButton: {
+        padding: 15,
+        position: 'relative',
+        width: '100%',
+    },
+})
