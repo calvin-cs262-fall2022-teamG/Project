@@ -4,6 +4,14 @@ Currently, Calvin students find themselves waiting long periods of time in line 
 
 Right now, students have no option to ordering before arriving at Peets. Many other establishments such as Starbucks have already implemented an app to order ahead of time. However, at Peets, all students are required to wait in line to be served increasing wait times. Ordering before arriving would add benefit to students in a rush and optimize the speed at which Peets coffee can operate. The app would clearly display drink options and give customers an estimated wait time for their drink depending on the traffic at the Café. In the app users would have the ability to customize their drink order. Payments options could be added in the future for students convience. 
 
+UI Design Model: https://github.com/calvin-cs262-fall2022-teamG/Project/blob/main/peetsForKnigtsUI.png
+
+UML Design Model: https://github.com/calvin-cs262-fall2022-teamG/Project/blob/main/UML%20Design.pdf
+
+Client Repo: https://github.com/calvin-cs262-fall2022-teamG/Client
+
+Service Repo: https://github.com/calvin-cs262-fall2022-teamG/Service
+
 -Ben Tanis
 -Matt Van Harn
 -Seong Chan Cho
