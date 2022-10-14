@@ -1,4 +1,4 @@
-# project
+# Peets4Knights
 
 Our vision is to provide students with a quick and easy way to get their favorite drink, so they can spend less time waiting in line and more time pursuing their future.
 
