@@ -6,17 +6,20 @@
 
 -- Drop previous versions of the tables if they exsts, in reverse order of the foreign keys.
 
-DROP TABLE IF EXISTS CompletedOrders;
+DROP TABLE IF EXISTS CompletedOrder;
 DROP TABLE IF EXISTS DrinkMenu;
 DROP TABLE IF EXISTS FoodMenu; 
 DROP TABLE IF EXISTS DrinkSpecifications; 
 DROP TABLE IF EXISTS DrinkItem; 
 DROP TABLE IF EXISTS FoodItem; 
-DROP TABLE IF EXISTS SyrupPumps;
+DROP TABLE IF EXISTS MilkPrep;
+DROP TABLE IF EXISTS SyrupAndSauceOptions;
+DROP TABLE IF EXISTS ShotOptions;
+DROP TABLE IF EXISTS Toppings;
 
 -- Create the schema.
 
-CREATE TABLE CompletedOrders (
+CREATE TABLE CompletedOrder (
 	ID SERIAL PRIMARY KEY,
 	time timestamp,
 	drinkID integer REFERENCES DrinkItem(ID),
@@ -39,11 +42,10 @@ CREATE TABLE FoodMenu (
 
 CREATE TABLE DrinkSpecifications (
 	size integer,
-	iced boolean,
-	sugar varchar(15),
-	whippedCream boolean,
-	syrup varchar(20) REFERENCES Syrups(ID),
-        decaf boolean	
+	milk array REFERENCE MilkPrep(),
+	shot array REFERENCE ShotOption(),
+	syrupAndSauce integer REFERENCE SyrupAndSauceOptions(),
+	toppings array REFERENCE Toppings(),
 );
 
 CREATE TABLE DrinkItem (
@@ -60,12 +62,41 @@ CREATE TABLE FoodItem (
 	cost money
 );
 
-CREATE TABLE SyrupPumps (
-	vanilla integer,
-	caramel integer,
-	pumpking integer,
-	hazelnut integer
+CREATE TABLE MilkPrep (
+	milkType varchar(15),
+	foam varchar(10),
+	milkTemp varchar(10)
 );
+
+CREATE TABLE ShotOptions (
+	shots integer,
+	shotPrep varchar(15),
+	decaf varchar(15)
+);
+
+CREATE TABLE SyrupAndSauceOptions (
+	caramelSauce integer,
+	vanillaSyrup integer,
+	cocunutSyrup integer,
+	honeySyrup integer,
+	sugarFreeVanillaSyrup integer,
+	chicorySyrup integer,
+	chocolateSauce integer,
+	whiteChocolateSauce integer,
+	simpleSyrup integer,
+	frenchHazelnutSyrup integer,
+	brownSugarSyrup integer,
+	pumpkinSyrup integer,
+	caramelAppleButterSyrup integer
+);
+
+CREATE TABLE Toppings (
+	caramelDrizzle varchar(10),
+	bakingSpice varchar(10),
+	whippedCream varchar(10),
+	cinnamon varchar(10)
+);
+
 
 -- Allow users to select data from the tables.
 
@@ -75,7 +106,10 @@ GRANT SELECT ON FoodMenu TO PUBLIC;
 GRANT SELECT ON DrinkSpecification TO PUBLIC;
 GRANT SELECT ON	DrinkItem TO PUBLIC;
 GRANT SELECT ON FoodItem TO PUBLIC;
-GRANT SELECT ON SyrupPumps TO PUBLIC;
+GRANT SELECT ON MilkPrep  TO PUBLIC;
+GRANT SELECT ON SyrupAndSauceOptions TO PUBLIC;
+GRANT SELECT ON ShotOptions TO PUBLIC;
+GRANT SELECT ON Toppings TO PUBLIC;
 
 -- Add sample records.
 
@@ -91,4 +125,10 @@ INSERT INTO DrinkItem VALUES;
 
 INSERT INTO FoodItem VALUES;
 
-INSERT INTO SyrupPumps VALUES;
+INSERT INTO MilkPrep VALUES;
+
+INSERT INTO SyrupAndSauceOptions TO PUBLIC;
+
+INSERT INTO ShotOptions TO PUBLIC;
+
+INSERT INTO Toppings TO PUBLIC;
