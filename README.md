@@ -14,7 +14,7 @@ Right now, students have no option to ordering before arriving at Peets. Many ot
 - [Service Repo](https://github.com/calvin-cs262-fall2022-teamG/Service)
 
 ## Team Members
+- Seong Chan Cho
 - Ben Tanis
 - Matt Van Harn
-- Seong Chan Cho
 - Gunju Yoo
