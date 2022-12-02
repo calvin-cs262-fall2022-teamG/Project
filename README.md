@@ -5,9 +5,9 @@ Right now, students have no option to ordering before arriving at Peets. Many ot
 
 
 ## References
-- [UI Design Model](https://github.com/calvin-cs262-fall2022-teamG/Project/blob/main/Peets4KnigthsUIDesign.png)
+- [UI Design Model](https://github.com/calvin-cs262-fall2022-teamG/Project/blob/main/Peets4KnightsUIDesign.png)
 
-- [UML Design Model](https://github.com/calvin-cs262-fall2022-teamG/Project/blob/main/Peets4KnightsDomainModel.png)
+- [UML Design Model](https://github.com/calvin-cs262-fall2022-teamG/Project/blob/main/Peets4KnightsUMLDesign.pdf)
 
 - [Client Repo](https://github.com/calvin-cs262-fall2022-teamG/Client)
 
